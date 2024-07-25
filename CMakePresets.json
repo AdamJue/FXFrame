@@ -1,0 +1,31 @@
+﻿{  
+  "version": 2,  
+  "cmakeMinimumRequired": {  
+    "major": 3,  
+    "minor": 10,  
+    "patch": 0  
+  },  
+  "configurePresets": [  
+    {  
+      "name": "linux-gcc-debug",  
+      "displayName": "Linux GCC Debug",  
+      "description": "Debug build using GCC on Linux",  
+      "generator": "Unix Makefiles",  
+      "binaryDir": "${sourceDir}/out/build/${presetName}",  
+      "cacheVariables": {  
+        "CMAKE_BUILD_TYPE": "Debug",  
+        "CMAKE_CXX_COMPILER": "g++",  
+        "CMAKE_TOOLCHAIN_FILE": "/home/yuntianming/work/vcpkg/scripts/buildsystems/vcpkg.cmake"  
+      }  
+    },  
+    {  
+      "name": "linux-gcc-release",  
+      "displayName": "Linux GCC Release",  
+      "description": "Release build using GCC on Linux",  
+      "inherits": "linux-gcc-debug",  
+      "cacheVariables": {  
+        "CMAKE_BUILD_TYPE": "Release"  
+      }  
+    }  
+  ]  
+}
