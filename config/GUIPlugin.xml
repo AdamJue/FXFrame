@@ -1,0 +1,12 @@
+<XML>
+	<GUI>
+<!--		<Plugin Name="FXNetPlugin" />-->
+		<Plugin Name="FXKernelPlugin" />
+<!--		<Plugin Name="FXTutorial3" />-->
+		<Plugin Name="GuiMeshPlugin" />
+<!--		<ConfigPath Name="FXNetPlugin"/>-->
+		<ConfigPath Name="FXKernelPlugin"/>
+<!--		<ConfigPath Name="FXTutorial3"/>-->
+		<ConfigPath Name="GuiMeshPlugin"/>
+	</GUI>
+</XML>

@@ -1,0 +1,2 @@
+add_subdirectory(FXTutorial3)
+add_subdirectory(GUIMeshPlugin)

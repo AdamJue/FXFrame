@@ -1,0 +1,6 @@
+*.tmp
+/build
+/.idea
+/cmake*
+**/cmake*/
+**/build*/

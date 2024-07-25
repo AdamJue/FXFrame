@@ -1,0 +1,32 @@
+{
+  "name": "felixframe",
+  "version-string": "0.1.0",
+  "dependencies": [
+    "concurrentqueue",
+    "rapidxml",
+    {
+      "name": "qtbase",
+      "version>=": "6.5.2#1",
+      "default-features": false,
+      "platform": "windows",
+      "features": [
+        "concurrent",
+        "network",
+        "opengl",
+        "png",
+        "sql",
+        "testlib",
+        "widgets",
+        "zstd"
+      ]
+    },
+    {
+      "name": "qttools",
+      "default-features": false,
+      "version>=": "6.5.2",
+      "features": [
+        "linguist"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+<XML>
+	<GUIServer>
+		<Plugin Name="FXNetPlugin" />
+		<Plugin Name="FXKernelPlugin" />
+<!--		<Plugin Name="FXTutorial3" />-->
+		<Plugin Name="MesherServerPlugin" />
+		<ConfigPath Name="FXNetPlugin"/>
+		<ConfigPath Name="FXKernelPlugin"/>
+<!--		<ConfigPath Name="FXTutorial3"/>-->
+		<ConfigPath Name="MesherServerPlugin"/>
+	</GUIServer>
+</XML>
