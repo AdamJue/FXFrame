@@ -1,2 +1,2 @@
 add_subdirectory(FXKernelPlugin)
-add_subdirectory(FXGuiLoader)
+#add_subdirectory(FXGuiLoader)
