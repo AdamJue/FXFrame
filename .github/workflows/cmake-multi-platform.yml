@@ -63,7 +63,7 @@ jobs:
 
     - name: Install dependencies with vcpkg
       run: |
-        ./vcpkg/vcpkg install <your-library>
+        ./vcpkg/vcpkg install
       shell: bash
 
     - name: Configure CMake with vcpkg
