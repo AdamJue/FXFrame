@@ -71,6 +71,7 @@ class FXIHasher
 {
 public:
     virtual uint32_t GetHashValue(const FXIVirtualNode& vNode) = 0;
+	virtual ~FXIHasher();
 };
 
 class FXCHasher : public FXIHasher

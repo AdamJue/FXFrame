@@ -18,13 +18,13 @@ public:
     FXCKernelModule(FXIPluginManager * p);
     virtual ~FXCKernelModule();
 
-    virtual bool Init();
-    virtual bool Shut();
+    virtual bool Init() override;
+    virtual bool Shut() override;
 
-    virtual bool BeforeShut();
-    virtual bool AfterInit();
+    virtual bool BeforeShut() override;
+    virtual bool AfterInit() override;
 
-    virtual bool Execute();
+    virtual bool Execute() override;
 
     //////////////////////////////////////////
     virtual FXGUID CreateGUID() override;
