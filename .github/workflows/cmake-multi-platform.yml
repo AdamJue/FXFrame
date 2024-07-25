@@ -52,8 +52,12 @@ jobs:
         if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
           echo "GCC Version:"
           gcc --version
+          echo "G++ Version:"
+          g++ --version
           echo "Clang Version:"
           clang --version
+          echo "Clang++ Version:"
+          clang++ --version
         elif [ "${{ matrix.os }}" == "windows-latest" ]; then
           echo "MSVC Version:"
           cl
