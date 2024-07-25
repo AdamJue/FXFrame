@@ -47,6 +47,18 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Output Compiler Version
+      run: |
+        if [ "${{ matrix.os }}" == "ubuntu-latest" ]; then
+          echo "GCC Version:"
+          gcc --version
+          echo "Clang Version:"
+          clang --version
+        elif [ "${{ matrix.os }}" == "windows-latest" ]; then
+          echo "MSVC Version:"
+          cl
+        fi
+
     - name: Install vcpkg
       run: |
         git clone https://github.com/microsoft/vcpkg.git
@@ -61,8 +73,14 @@ jobs:
       run: |
         echo "build-output-dir=${{ github.workspace }}/build" >> "$GITHUB_OUTPUT"
 
+    - name: Install dependencies with vcpkg
+      run: |
+        ./vcpkg/vcpkg install
+      shell: bash
+
     - name: Configure CMake with vcpkg
       run: |
+        cd ${{ github.workspace }}
         cmake -B ${{ steps.strings.outputs.build-output-dir }}
         -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }}
         -DCMAKE_C_COMPILER=${{ matrix.c_compiler }}
