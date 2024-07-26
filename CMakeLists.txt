@@ -42,8 +42,6 @@ file(GLOB INCLUDE_FILES
         ${CMAKE_SOURCE_DIR}/FXComm/FXPublic/*.hpp
         ${CMAKE_SOURCE_DIR}/FXComm/FXCore/*.h
         ${CMAKE_SOURCE_DIR}/FXComm/FXCore/*.hpp
-        ${CMAKE_SOURCE_DIR}/FXComm/FXLogicDefine/*.h
-
 )
 
 
