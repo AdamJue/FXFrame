@@ -38,3 +38,10 @@ else()
     )
 
 endif()
+
+
+install(TARGETS ${ProjectName}
+        LIBRARY DESTINATION bin
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+)

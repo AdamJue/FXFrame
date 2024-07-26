@@ -28,7 +28,6 @@ if(UNIX)
             -DELPP_NO_DEFAULT_LOG_FILE
     )
 else()
-    target_link_libraries(${ProjectName}  -static-libstdc++)
     add_definitions(
             -DWIN
             -D_USRDLL
@@ -36,3 +35,10 @@ else()
     )
 
 endif()
+
+
+install(TARGETS ${ProjectName}
+        LIBRARY DESTINATION bin
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+)

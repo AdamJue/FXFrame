@@ -35,4 +35,18 @@ include_directories(${CMAKE_SOURCE_DIR}/FXComm/FXLogicDefine)
 add_subdirectory(FXTutorial)
 add_subdirectory(FXComm)
 
+file(GLOB INCLUDE_FILES
+        ${CMAKE_SOURCE_DIR}/Base/*.h
+        ${CMAKE_SOURCE_DIR}/Base/*.hpp
+        ${CMAKE_SOURCE_DIR}/FXComm/FXPublic/*.h
+        ${CMAKE_SOURCE_DIR}/FXComm/FXPublic/*.hpp
+        ${CMAKE_SOURCE_DIR}/FXComm/FXCore/*.h
+        ${CMAKE_SOURCE_DIR}/FXComm/FXCore/*.hpp
+        ${CMAKE_SOURCE_DIR}/FXComm/FXLogicDefine/*.h
 
+)
+
+
+install(FILES ${INCLUDE_FILES}
+        DESTINATION include
+)

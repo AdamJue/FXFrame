@@ -37,3 +37,9 @@ set_target_properties( ${ProjectName} PROPERTIES
         RUNTIME_OUTPUT_DIRECTORY ${FXOutPutDir}
         LIBRARY_OUTPUT_DIRECTORY ${FXOutPutDir} )
 
+
+install(TARGETS ${ProjectName}
+        LIBRARY DESTINATION bin
+        ARCHIVE DESTINATION lib
+        RUNTIME DESTINATION bin
+)
