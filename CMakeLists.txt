@@ -48,5 +48,11 @@ file(GLOB INCLUDE_FILES
 
 
 install(FILES ${INCLUDE_FILES}
-        DESTINATION include
+        DESTINATION include/fxframe
 )
+
+install(TARGETS FXKernelPlugin GuiMeshPlugin FXTutorial3
+        EXPORT fxframe
+        INCLUDES DESTINATION "include/fxframe"
+)
+install(EXPORT fxframe FILE "fxframeConfig.cmake" DESTINATION "share/fxframe")
